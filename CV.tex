@@ -1,0 +1,294 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
+%\usepackage{fullpage}
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+\addtolength{\voffset}{-1.0cm}
+\pagenumbering{gobble}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\usepackage{lipsum}
+\usepackage{xparse}
+
+\newsavebox{\fminipagebox}
+\NewDocumentEnvironment{fminipage}{m O{\fboxsep}}
+ {\par\kern#2\noindent\begin{lrbox}{\fminipagebox}
+  \begin{minipage}{#1}\ignorespaces}
+ {\end{minipage}\end{lrbox}%
+  \makebox[#1]{%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+    \fbox{\usebox{\fminipagebox}}%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+  }\par\kern#2
+ }
+
+\include{structure} % Include structure.tex which contains packages and document layout definitions
+
+\hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+\newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}\vspace{0.3em}} % Main title (name) with date of birth or subtitle
+
+\usepackage{relsize} % Required for the \textscale command for custom small caps text
+\usepackage{hyperref} % Required for customizing links
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4} % Defines the dark blue color used for links
+\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}} % Assigns the dark blue color to all links in the template
+\newcommand*\bull{\ \ \raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}} \ } % Custom bullet point for separating content
+\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]} % A custom vspace command with custom before and after spacing lengths
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]} % A custom vspace command with custom before and after spacing lengths that do not break the page
+
+\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}} % Defines a horizontal line with some vertical space before and after it
+
+\begin{document}
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\maintitle{Muhammad Fadhil Ginting}{Last Updated on : 21th November, 2017}  % Your name and date of birth or subtitle
+
+\noindent\href{mailto:fadhil.ginting@gmail.com}{fadhil.ginting@gmail.com}\bull % Your email address
+\textsmaller{+}62 811 607 5165\bull \href{https://www.fadhilginting.com}{www.fadhilginting.com} \bull % Your phone number(s) and Skype username
+\href{https://github.com/mfadhilgtg}{www.github.com/mfadhilgtg}\\ % Your URL
+Galeri Ciumbuleuit 2 Unit 2502B, 40142 Bandung - Indonesia\bull \href{https://www.linkedin.com/in/mfadhilgtg/}{www.linkedin.com/in/mfadhilgtg}  % Your address
+\\
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\vspace{-3mm}
+\begin{fminipage}{0.9\textwidth}
+\textbf{\textsc{Summary}}\\
+\vspace{-3mm}
+\begin{itemize}
+\item Neophile, organized, extroverted and active person
+\item Solid Background in Electrical Engineering and Robotics
+\item Strong motivation and interest for SLAM, Artificial Intelligence and Computer Vision
+\end{itemize}
+\end{fminipage}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{-1mm}
+\section{Education}
+
+\begin{tabular}{rl}	
+2013-2017 & \textbf{Bachelor of Science in Electrical Engineering} - \textsc{Institut Teknologi Bandung}\\ 
+&Bandung, Indonesia\\
+&\normalsize \textsc{Gpa}: 3.94/4.00 | \small Advisor: Prof. Bambang Riyanto Trilaksono\\
+&\\
+
+%------------------------------------------------
+
+2010-2013 & \textbf{Senior High School} - \normalsize\textsc{Public Senior High School 1, Medan}\\
+& Medan, Indonesia\\
+&\normalsize \textsc{Program}: Natural Sciences\\
+&\\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE 
+%----------------------------------------------------------------------------------------
+\vspace{-4mm}
+\section{Experience}
+
+\begin{tabular}{lp{12cm}}
+\textsc{Aug- 2017} & \textsc{Institut Teknologi Bandung}, Bandung, Indonesia \\
+& \emph{Research Assistant}, \textit{Autonomous Vehicle Research Group}\\ 
+& \footnotesize{Designing surveillance system using aerial and ground robots, building object tracking algorithms, and assisting bachelor students in the research.}\\
+& \footnotesize{\textbf{Supervisor}: Dr. Kusprasapta Mutijarsa, ST. MT.}\\
+& \footnotesize{\textbf{Highlights}: \textit{DJI Phantom 4 Drone, Single Camera, Object Tracking, Python, ROS, STM32, Wheel kinematics}}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{May- 2017} & \textsc{Institut Teknologi Bandung}, Bandung, Indonesia \\
+& \emph{Research Assistant}, \textit{Advanced Robotics Research Laboratory}\\ 
+& \footnotesize{Building navigation system for Autonomous Underwater Glider, implementing guidance system and conducting sea testing.}\\
+& \footnotesize{\textbf{Supervisor}: Prof. Dr. Ir. Bambang Riyanto Trilaksono}\\
+& \footnotesize{\textbf{Highlights}: \textit{Autonomous Underwater Vehicle(AUV), Doppler Velocity Logger(DVL), IMU, Altimeter, C++, Sensor Fusion using Kalman Filter, Waypoint Tracking, Hardware-in-the-loop (HIL) simulation}}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{Jan-Mar 2017} & \textsc{Labtek Indie}, Bandung, Indonesia \\
+& \emph{Intern}\\ 
+& \footnotesize{Proposed and built prototype of an efficient shopping scheme for convenience stores using mobile platforms.}\\
+& \footnotesize{\textbf{Highlights}: \textit{Design Thinking, Scrum(Agile Framework), Android Studio, Firebase, Trello}}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{Jun-Aug 2016} & \textsc{CERN}, Geneva , Switzerland \\
+& \emph{Summer Student}, \textit{CERN Summer Student Programme 2016}\\ 
+& \footnotesize{Devised a controlled high voltage module for Micro Pattern Gas Detectors(MPGD), wrote the report and presented the result to MPGD Collaboration.}\\
+& \footnotesize{\textbf{Supervisor}: Dr. Leszek Ropelewski}\\
+& \footnotesize{\textbf{Highlights}: \textit{GEMs Detector, PCB Design(Altium),  LabVIEW, High Voltage Power Supply, Microcontroller}}\\
+\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\vspace{-4mm}
+\section{Publications}
+\begin{enumerate}
+  \item Putri, T.W.O., {\bf Ginting, M. F.}, Trilaksono, B. R., Hidayat, E. M. I., and Sagala, M. F.  ``Hardware In the Loop Simulation Development of Guidance System for Autonomous Underwater Glider." (Accepted) 
+\emph{The International Conference on Electrical Engineering and Informatics}, 2017.
+\end{enumerate}
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+\vspace{-4mm}
+\section{Languages}
+
+\begin{tabular}{rl}
+\textsc{English:} & Proficient, IELTS 7.5/9.0 (CEFR C1), 2017\\
+
+\textsc{German:} & Independent\\
+\textsc{Indonesian:} & Native\\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS 
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\begin{tabular}{llr}
+\textbf{Programming} & C/C++, Python, MATLAB, ROS, VHDL, Java\\
+\\
+\vspace{-1mm}
+\textbf{Operating Systems} & Systems(Linux, Windows, Virtual Box), OpenCV, LabVIEW, OpenMP, Eagle\\
+& Altium Designer, IDEs(Visual Studio, Android Studio, CodeBlock, Arduino)\\
+& Proteus, NI Multisim, SPICE, Altera Quartus \\
+\\
+\vspace{-1mm}
+\textbf{Hardware} & Altera Cyclone FPGA, Beaglebone, Raspberry-Pi, TS-7250 SBC, STM32, Arduino,\\
+& ATMEL AVR Microcontrollers,  Mbed LPC 1768, Texas Instrument C6670 DSP,\\
+& Analog Devices Blackfin DSP Processor\\
+\\
+\vspace{-1mm}
+\textbf{Productivity} & Microsoft Office, {\fb \LaTeX}, SAS(Analytics) Software, Trello\\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS AND SCHOLARSHIP
+%----------------------------------------------------------------------------------------
+
+\section{Awards and Scholarships}
+
+\begin{tabular}{r|p{12cm}}
+\textsc{2017} & \textsc{Awardee of Indonesia Education Scholarship}\\
+& \emph{Indonesia Endowment Education(LPDP)}\\ 
+\multicolumn{2}{c}{} \\
+
+\textsc{2016} & \textsc{Top 10 graduates - Leadership Program}\\
+& \emph{Young Leader for Indonesia 2016}\\ 
+\multicolumn{2}{c}{} \\
+
+\textsc{2016} & \textsc{Outstanding Student Awards}\\
+& \emph{Electrical Engineering Department, Institut Teknologi Bandung}\\ 
+\multicolumn{2}{c}{} \\
+
+\textsc{2015} & \textsc{2\textsuperscript{nd} Runner Up}\\
+& \emph{ABU Robocon 2015(Asia Pacific Broadcasting Union Robot Contest)}\\ 
+\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	ASSISTANTSHIPS
+%----------------------------------------------------------------------------------------
+\vspace{-3mm}
+\section{Assistantships}
+
+\begin{tabular}{l}
+
+\textsc{Jan - May 2017}, Lab Coordinator, \textit{Electronics}\\
+\textsc{School of Electrical Engineering and Informatics}, Institut Teknologi Bandung\\ 
+\\
+\textsc{Aug - Dec 2016}, Assistant Lecturer, \textit{Control Systems}\\
+\textsc{School of Electrical Engineering and Informatics}, Institut Teknologi Bandung\\ 
+\\
+\textsc{Aug - Dec 2016}, Lab Assistant, \textit{Microprocessor Systems}\\
+\textsc{School of Electrical Engineering and Informatics}, Institut Teknologi Bandung\\ 
+\\
+\textsc{Jan-May 2016}, Assistant Lecturer, \textit{Electronics}\\
+\textsc{School of Electrical Engineering and Informatics}, Institut Teknologi Bandung\\ 
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	ORGANISATIONS
+%----------------------------------------------------------------------------------------
+\vspace{-3mm}
+\section{Organisations}
+
+\begin{tabular}{l}
+\vspace{-2mm}
+\textsc{2015 - 2016}, \textit{Chairman}, University Student Robotics Team\\
+\\
+\textsc{2014 - 2016}, \textit{Senior Staff of Character Development Division}, Electrical Engineering Student Association\\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS AND ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+\section{Interests and Activities}
+
+Technology, Robotics, Smart System\\
+Team management, Leadership, Teaching, Entrepreneurship\\
+Tennis, Travelling, Photography, Reading
+
+\end{document}
