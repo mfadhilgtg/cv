@@ -1,6 +1,6 @@
 # My CV in Latex
 
-> Suitable for graduate students candidate
+> Suitable for graduate student candidates
 
 ## Base Template
 http://www.latextemplates.com/template/plasmati-graduate-cv
@@ -14,9 +14,8 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/
 
 ## Compiling
 Compiler: Xelatex
-Run the script in the terminal:
-'''bash
-$ cd cv/
-$ xelatex CV.tex
-'''
-
+Run the script in the terminal
+  ```bash
+  $ cd cv/
+  $ xelatex cv.tex
+  ```
